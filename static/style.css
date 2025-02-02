@@ -1,0 +1,55 @@
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
+h1 {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.hex-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hex {
+    width: 80px;
+    height: 80px;
+    background-color: #222;
+    color: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    font-weight: bold;
+    box-shadow: 0 0 10px limegreen;
+    transition: transform 0.3s;
+}
+
+.hex:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px limegreen;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #00ff00;
+    color: #000;
+}

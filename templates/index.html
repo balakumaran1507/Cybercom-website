@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Club Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+    <p>Your progress:</p>
+
+    <div class="hex-grid">
+        <div class="hex">THM: {{ user.tryhackme }}</div>
+        <div class="hex">HTB: {{ user.hackthebox }}</div>
+        <div class="hex">Web: {{ user.web }}</div>
+        <div class="hex">Forensics: {{ user.forensics }}</div>
+        <div class="hex">Network: {{ user.network }}</div>
+        <div class="hex">Reverse: {{ user.reversing }}</div>
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+</body>
+
+
+</html>
